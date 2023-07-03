@@ -44,11 +44,11 @@ export const sendEmail = async ({ email, emailType, userId }: SendEmailProps) =>
             from: "ms8460149@gmail.com", // sender address
             to: email, // list of receivers
             subject: emailType === 'VERIFY' ? 'Verify your email' : 'Reset your password', // Subject line
-            html: `<p>Click here <a href="https://nextjs-full-stack-auth-hoq2ymv7j-iamsidar07.vercel.app/${emailType === 'VERIFY' ? 'verifyEmail' : 'resetPassword'}?token=${hashedToken}">${emailType === 'VERIFY' ? 'verify Email' : 'Reset Password'}<a/>
+            html: `<p>Click here <a href="https://nextjs-full-stack-auth.vercel.app/${emailType === 'VERIFY' ? 'verifyEmail' : 'resetPassword'}?token=${hashedToken}">${emailType === 'VERIFY' ? 'verify Email' : 'Reset Password'}<a/>
             <br/>
             or copy and paste the link in browser
             <br/>
-            https://nextjs-full-stack-auth-hoq2ymv7j-iamsidar07.vercel.app/${emailType === 'VERIFY' ? 'verifyEmail' : 'resetPassword'}?token=${hashedToken}`, // html body
+            https://nextjs-full-stack-auth.vercel.app/${emailType === 'VERIFY' ? 'verifyEmail' : 'resetPassword'}?token=${hashedToken}`, // html body
         }
         const res = await transport.sendMail(mailOptions);
        
