@@ -1,8 +1,5 @@
-import { NextApiRequest } from "next";
+import { NextRequest, NextResponse } from 'next/server'
 
-export const GET = async (req:NextApiRequest)=>{
-    return {
-        status: 200,
-        data: "Hello World"
-    }
+export const GET = async (req: NextRequest) => {
+    return NextResponse.json({ message: 'Hello World' }, { status: 200 })
 }
