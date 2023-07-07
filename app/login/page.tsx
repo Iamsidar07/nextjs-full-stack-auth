@@ -85,20 +85,6 @@ const Login = () => {
           Don&apos;t have an account ?
           <Link href="/signup" className="text-blue-600"> Signup </Link>
         </p>
-
-        <div className='flex items-center'>
-          <div className='w-full border' />
-          <span className='text-center mx-1'>Or</span>
-          <div className='w-full border' />
-        </div>
-        <div className='flex flex-col items-center gap-2'>
-          {
-            Array(3).fill(0).map((_, i) => (<button
-              key={i}
-              className="outline-none py-2 md:py-2.5 bg-blue-600 text-white rounded-md w-full">Continue with Google
-            </button>))
-          }
-        </div>
       </div>
     </div>
   )
